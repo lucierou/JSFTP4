@@ -12,7 +12,7 @@ public class User {
 	private String poids;
 	private String taille;
 	private String imc;
-	private Integer conseil;
+	private String conseil;
 
 	public User() {
 	}
@@ -75,11 +75,11 @@ public class User {
 		this.imc = imc;
 	}
 	
-	public Integer getConseil() {
+	public String getConseil() {
 		return conseil;
 	}
 
-	public void setConseil(Integer conseil) {
+	public void setConseil(String conseil) {
 		this.conseil = conseil;
 	}
 
@@ -93,17 +93,15 @@ public class User {
 		double y = Double.parseDouble(taille)/100;
 		double d = x/(y*y);
 
-		String imc =  Double.toString(d);
+		String imc = (Double.toString(d)).substring(0, 5);
 		this.setImc(imc);
 		
 		if (d > 25)
-			this.conseil = 1;
+			this.conseil = "1";
 		else if (d < 18.5)
-			this.conseil = 1;
+			this.conseil = "-1";
 		else
-			this.conseil = 0;
+			this.conseil = "0";
 	}
-	
-	
-	
+		
 }

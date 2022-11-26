@@ -28,23 +28,21 @@
 		<br />
 		<p>
 			Poids (en kg) :
-			<h:inputText value="#{User.poids}" />
+			<h:inputText value="#{User.poids}" placeholder="Poids en kg" />
 		</p>
 		<br />
 		<p>
 			Taille (en cm) :
-			<h:inputText value="#{User.taille}" />
-		</p>
-		
-		<h:commandButton action="#{User.calculerIMC()}" value="Calculer IMC" />
-		
-		<h:outputText value="Votre IMC : #{User.imc}" rendered="#{User.imc != null}"/>
-		<h:outputText value="IMC faible" rendered="#{User.conseil = '-1'}"/>
-		<h:outputText value="IMC moyen" rendered="#{User.conseil = '0'}"/>
-		<h:outputText value="IMC élevé" rendered="#{User.conseil = '1'}"/>
-
-		
+			<h:inputText value="#{User.taille}" placeholder="Taille en cm" />
+		</p>		
+		<h:commandButton action="#{User.calculerIMC()}" value="Calculer IMC" />	
 	</h:form>
+	
+	<h:outputText value="Votre IMC : #{User.imc}" rendered="#{User.imc != null}"/>
+	<br />
+	<h:outputText value="IMC faible" rendered="#{User.conseil.equals('-1')}"/>
+	<h:outputText value="IMC moyen" rendered="#{User.conseil.equals('0')}"/>
+	<h:outputText value="IMC élevé" rendered="#{User.conseil.equals('1')}"/>
 	
 </body> 
 </html>
