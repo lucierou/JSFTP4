@@ -17,14 +17,8 @@
 	<p> 
 		Conseils : 
 		<h:outputText value="
-			Cet indice de masse corporel (IMC) est trop faible : 
-			une pathologie peut éventuellement être à l’origine de ce déficit pondéral. 
-			Que ce soit d’ordre physique ou psychique, la meilleure solution est d’en parler avec votre médecin. 
-			Il pourra ainsi vous examiner et chercher la cause de cette maigreur. 
-			Sachez également qu’un BMI trop faible vous expose à un nombre considérable de risques pour votre santé tels que : 
-			l’ostéoporose, le diabète, l’anémie et autres carences, etc. 
-			Il est donc urgent pour vous de prendre du poids de manière saine et progressive.
-		" rendered="#{User.conseil.equals('-1')}"/>
+			Un indice de masse corporel situé entre 18,5 et 25 correspond à un poids normal.
+		" rendered="#{User.conseil.equals('0')}"/>
 	</p>
 	<h:form>
 		<h:commandButton action="index" value="Retour à la page d'accueil" />	

@@ -88,7 +88,7 @@ public class User {
 		return "User [nom=" + nom + ", age=" + age + ", sexe=" + sexe + ", poids=" + poids + ", taille=" + taille + "]";
 	}
 	
-	public int calculerIMC() {
+	public String calculerIMC() {
 		double x = Double.parseDouble(poids);
 		double y = Double.parseDouble(taille)/100;
 		double d = x/(y*y);
@@ -96,15 +96,13 @@ public class User {
 		String imc = (Double.toString(d)).substring(0, 5);
 		this.setImc(imc);
 		
-		if (d > 25)
+		if (d > 25) 
 			this.conseil = "1";
 		else if (d < 18.5)
 			this.conseil = "-1";
 		else
-			this.conseil = "0";
+			this.conseil = "0";	
 		
-		return 1;
-	}
-	
-		
+		return conseil;
+	}	
 }

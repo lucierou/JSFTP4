@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16693830726994" configfile="/JSFTP4/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="216" y="168" id="pf16694760692910" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16694760692911" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="444" y="168" id="pf16694760692912" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16694760692911" path="/page2.xhtml"/>
-  <links id="pf16694760692911" target="pf16694760692912" source="pf16694760692910" outcome="1" redirect="true" fromaction="#{User.calculerIMC()}"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="216" y="168" id="pf16694760692910" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16694760692911 pf16694773675293 pf16694773675294" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="432" y="72" id="pf16694760692912" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16694760692911" path="/page2.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page3.xhtml" x="447" y="180" id="pf16694773675295" inlinks="pf16694773675293" path="/page3.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page4.xhtml" x="444" y="276" id="pf16694773675296" inlinks="pf16694773675294" path="/page4.xhtml"/>
+  <links id="pf16694760692911" target="pf16694760692912" source="pf16694760692910" outcome="-1" redirect="true" fromaction="#{User.calculerIMC()}"/>
+  <links id="pf16694773675293" target="pf16694773675295" source="pf16694760692910" outcome="0" redirect="true" fromaction="#{User.calculerIMC()}"/>
+  <links id="pf16694773675294" target="pf16694773675296" source="pf16694760692910" outcome="1" redirect="true" fromaction="#{User.calculerIMC()}"/>
 </pageflow:Pageflow>

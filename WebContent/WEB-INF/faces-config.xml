@@ -14,8 +14,28 @@
 		<from-view-id>/index.xhtml</from-view-id>
 		<navigation-case>
 			<from-action>#{User.calculerIMC()}</from-action>
-			<from-outcome>1</from-outcome>
+			<from-outcome>-1</from-outcome>
 			<to-view-id>/page2.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{User.calculerIMC()}</from-action>
+			<from-outcome>0</from-outcome>
+			<to-view-id>/page3.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{User.calculerIMC()}</from-action>
+			<from-outcome>1</from-outcome>
+			<to-view-id>/page4.xhtml</to-view-id>
 			<redirect />
 		</navigation-case>
 	</navigation-rule>
