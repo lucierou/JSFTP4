@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+	<p>
+		Bonjour 
+		<h:outputText value="Madame " rendered="#{User.sexe == 'F'}" />
+		<h:outputText value="Monsieur " rendered="#{User.sexe == 'M'}" />
+		<h:outputText value="#{User.nom}"/>	
+	</p>
+	<h:outputText value="Votre IMC : #{User.imc}" rendered="#{User.imc != null}"/>
+	<br />
+	<p> Conseils : 
+	<h:outputText value="
+		Cet indice de masse corporel (IMC) est trop faible : 
+		une pathologie peut éventuellement être à l’origine de ce déficit pondéral. 
+		Que ce soit d’ordre physique ou psychique, la meilleure solution est d’en parler avec votre médecin. 
+		Il pourra ainsi vous examiner et chercher la cause de cette maigreur. 
+		Sachez également qu’un BMI trop faible vous expose à un nombre considérable de risques pour votre santé tels que : 
+		l’ostéoporose, le diabète, l’anémie et autres carences, etc. 
+		Il est donc urgent pour vous de prendre du poids de manière saine et progressive.
+	" rendered="#{User.conseil.equals('-1')}"/>
+	<h:outputText value="
+		Un indice de masse corporel situé entre 18,5 et 25 correspond à un poids normal.
+	" rendered="#{User.conseil.equals('0')}"/>
+	<h:outputText value="
+		Il est important que vous changiez avant tout vos habitudes en instaurant une hygiène de vie saine. 
+		Pratiquez d’une part, de l’exercice plusieurs fois par semaine. 
+		Et d’autre part, modifiez votre alimentation : optez pour des aliments sains et équilibrés. 
+		Veillez également à éviter toutes les préparations grasses et/ou sucrées.
+	" rendered="#{User.conseil.equals('1')}"/>
+	</p>
+	
+</body> 
+</html>

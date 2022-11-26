@@ -88,7 +88,7 @@ public class User {
 		return "User [nom=" + nom + ", age=" + age + ", sexe=" + sexe + ", poids=" + poids + ", taille=" + taille + "]";
 	}
 	
-	public void calculerIMC() {
+	public int calculerIMC() {
 		double x = Double.parseDouble(poids);
 		double y = Double.parseDouble(taille)/100;
 		double d = x/(y*y);
@@ -102,6 +102,9 @@ public class User {
 			this.conseil = "-1";
 		else
 			this.conseil = "0";
+		
+		return 1;
 	}
+	
 		
 }

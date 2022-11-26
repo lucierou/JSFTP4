@@ -38,11 +38,5 @@
 		<h:commandButton action="#{User.calculerIMC()}" value="Calculer IMC" />	
 	</h:form>
 	
-	<h:outputText value="Votre IMC : #{User.imc}" rendered="#{User.imc != null}"/>
-	<br />
-	<h:outputText value="IMC faible" rendered="#{User.conseil.equals('-1')}"/>
-	<h:outputText value="IMC moyen" rendered="#{User.conseil.equals('0')}"/>
-	<h:outputText value="IMC élevé" rendered="#{User.conseil.equals('1')}"/>
-	
 </body> 
 </html>

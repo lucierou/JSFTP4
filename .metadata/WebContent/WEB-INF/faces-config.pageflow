@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16693830726994" configfile="/TP4/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16693830726994" configfile="/JSFTP4/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="216" y="168" id="pf16694760692910" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16694760692911" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="page2.xhtml" x="444" y="168" id="pf16694760692912" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16694760692911" path="/page2.xhtml"/>
+  <links id="pf16694760692911" target="pf16694760692912" source="pf16694760692910" outcome="1" redirect="true" fromaction="#{User.calculerIMC()}"/>
+</pageflow:Pageflow>

@@ -9,5 +9,15 @@
 		<managed-bean-class>entity.User</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{User.calculerIMC()}</from-action>
+			<from-outcome>1</from-outcome>
+			<to-view-id>/page2.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
 
 </faces-config>
